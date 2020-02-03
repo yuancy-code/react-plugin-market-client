@@ -2,9 +2,9 @@
  * @Author: yuanchengyong
  * @Date: 2020-01-13 09:46:07
  * @Last Modified by: yuanchengyong
- * @Last Modified time: 2020-02-03 17:58:08
+ * @Last Modified time: 2020-02-03 20:23:35
  */
-import React, { useState, useEffect } from "react";
+import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -44,7 +44,7 @@ class App extends React.Component {
     } catch (e) {}
   }
   render() {
-    const { userName } = this.state.user;
+    const { nickName } = this.state.user;
     return (
       <div className="app">
         <Router>
@@ -64,7 +64,7 @@ class App extends React.Component {
           </Menu> */}
               <div className="user-info">
                 <Icon type="user" />
-                <span className="user-name">{userName}</span>
+                <span className="user-name">{nickName}</span>
               </div>
             </Header>
             <Layout className="container">

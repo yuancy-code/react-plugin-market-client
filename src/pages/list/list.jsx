@@ -2,7 +2,7 @@
  * @Author: yuanchengyong
  * @Date: 2020-01-14 15:51:18
  * @Last Modified by: yuanchengyong
- * @Last Modified time: 2020-02-03 17:59:46
+ * @Last Modified time: 2020-02-03 18:46:39
  */
 import React from "react";
 import http from "@http";
@@ -113,10 +113,12 @@ class List extends React.Component {
     });
     try {
       let { resultCode, data } = await http.get("/list");
-      this.setState({
-        data,
-        loading: false
-      });
+      if (resultCode === "0000") {
+        this.setState({
+          data,
+          loading: false
+        });
+      }
     } catch (e) {}
   }
   render() {
