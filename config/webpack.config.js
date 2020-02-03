@@ -305,6 +305,7 @@ module.exports = function(webpackEnv) {
         ...(modules.webpackAliases || {}),
         "@core": path.resolve("./src/system-core"),
         "@plugins": path.resolve("./src/plugins"),
+        "@http": path.resolve("./src/http"),
       },
       plugins: [
         // Adds support for installing with Plug'n'Play, leading to faster installs and adding
